@@ -8,13 +8,13 @@ public class DB_utilities {
     public static PreparedStatement preparedStatement;
     public static ResultSet resultSet;
 
-
+//db info istemeliyiz
     public static void createConnection() {
         try {
             connection = DriverManager.getConnection(
-                    ConfigurationReader.getProperty("url1"),
+                    ConfigurationReader.getProperty("url"),
                     ConfigurationReader.getProperty("username"),
-                    ConfigurationReader.getProperty("password1")
+                    ConfigurationReader.getProperty("password")
             );
         } catch (SQLException e) {
             throw new RuntimeException(e);
