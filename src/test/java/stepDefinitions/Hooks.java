@@ -1,10 +1,8 @@
 package stepDefinitions;
 
-import enums.USER_INFO;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import io.restassured.RestAssured;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -67,29 +65,21 @@ public class Hooks {
          Driver.closeDriver();
 
     }
-
-    /**
-     * This method for login as a buyer
-     *
-     * @author Yasemin
-     * since 19.02.2024
-     */
-    @Before("@BuyerLogin")
-    public void buyerLogin() {
-        driver.get(ConfigurationReader.getProperty("url"));
-        ReusableMethods.waitForVisibility(commonPage.getLoginPage().loginButton, 5);
-        commonPage.getLoginPage().loginButton.click();
-        commonPage.getLoginPage().loginMethod(USER_INFO.BUYEROMER_CREDENTIAL.getEmail(), USER_INFO.BUYEROMER_CREDENTIAL.getPassword());
-
-    }
-    @Before("@SellerLogin")
-    public void sellerLogin() {
-        driver.get(ConfigurationReader.getProperty("url"));
-        ReusableMethods.waitForVisibility(commonPage.getLoginPage().loginButton, 5);
-        commonPage.getLoginPage().loginButton.click();
-        commonPage.getLoginPage().loginMethod(USER_INFO.SELLEROMER_CREDENTIALS.getEmail(), USER_INFO.SELLEROMER_CREDENTIALS.getPassword());
-    }
-
+//    @Before("@BuyerLogin")
+//    public void buyerLogin() {
+//        driver.get(ConfigurationReader.getProperty("url"));
+//        ReusableMethods.waitForVisibility(commonPage.getLoginPage().loginButton, 5);
+//        commonPage.getLoginPage().loginButton.click();
+//        commonPage.getLoginPage().loginMethod(USER_INFO.BUYEROMER_CREDENTIAL.getEmail(), USER_INFO.BUYEROMER_CREDENTIAL.getPassword());
+//
+//    }
+//    @Before("@SellerLogin")
+//    public void sellerLogin() {
+//        driver.get(ConfigurationReader.getProperty("url"));
+//        ReusableMethods.waitForVisibility(commonPage.getLoginPage().loginButton, 5);
+//        commonPage.getLoginPage().loginButton.click();
+//        commonPage.getLoginPage().loginMethod(USER_INFO.SELLEROMER_CREDENTIALS.getEmail(), USER_INFO.SELLEROMER_CREDENTIALS.getPassword());
+//    }
     @Before("@DB")
     public void setupDatabase() {
         DB_utilities.createConnection();
