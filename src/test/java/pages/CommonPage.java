@@ -10,5 +10,22 @@ public abstract class CommonPage {
         PageFactory.initElements(driver, this);
     }
 
+    private HomePage homePage;
+    private LoginPage loginPage;
+
+    public HomePage getHomePage() {
+        if (homePage == null) {
+            homePage = new HomePage();
+        }
+        return homePage;
+    }
+
+
+    public LoginPage getLoginPage() {
+        if (loginPage == null) {
+            loginPage = new LoginPage();
+        }
+        return loginPage;
+    }
 
 }
