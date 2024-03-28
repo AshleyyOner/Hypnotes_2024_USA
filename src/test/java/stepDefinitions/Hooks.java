@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import enums.USER_INFO;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -12,6 +13,8 @@ import utilities.ConfigurationReader;
 import utilities.DB_utilities;
 import utilities.Driver;
 import utilities.ReusableMethods;
+
+import static utilities.ConfigurationReader.properties;
 
 public class Hooks {
     public static WebDriver driver;
@@ -58,32 +61,20 @@ public class Hooks {
             final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", "screenshots");
         }
-
-
-
-
          Driver.closeDriver();
-
     }
-//    @Before("@BuyerLogin")
-//    public void buyerLogin() {
-//        driver.get(ConfigurationReader.getProperty("url"));
-//        ReusableMethods.waitForVisibility(commonPage.getLoginPage().loginButton, 5);
-//        commonPage.getLoginPage().loginButton.click();
-//        commonPage.getLoginPage().loginMethod(USER_INFO.BUYEROMER_CREDENTIAL.getEmail(), USER_INFO.BUYEROMER_CREDENTIAL.getPassword());
-//
-//    }
-//    @Before("@SellerLogin")
-//    public void sellerLogin() {
-//        driver.get(ConfigurationReader.getProperty("url"));
-//        ReusableMethods.waitForVisibility(commonPage.getLoginPage().loginButton, 5);
-//        commonPage.getLoginPage().loginButton.click();
-//        commonPage.getLoginPage().loginMethod(USER_INFO.SELLEROMER_CREDENTIALS.getEmail(), USER_INFO.SELLEROMER_CREDENTIALS.getPassword());
-//    }
+
+    @Before("@TherapistLogin")
+    public void therapistLogin() {
+        driver.get(properties.getProperty("url"));
+        ReusableMethods.waitForVisibility(commonPage.getLoginPage().loginButton, 5);
+        commonPage.getLoginPage().loginButton.click();
+        commonPage.getLoginPage().loginMethod(USER_INFO.THERAPIST_CREDENTIAL.getEmail(), USER_INFO.THERAPIST_CREDENTIAL.getPassword());
+    }
+
     @Before("@DB")
     public void setupDatabase() {
         DB_utilities.createConnection();
-
     }
 
     @After("@DB")
