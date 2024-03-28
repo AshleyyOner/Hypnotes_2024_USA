@@ -40,17 +40,19 @@ public class LoginPage extends CommonPage{
         getLoginPage().email.sendKeys(USER_INFO.THERAPIST_CREDENTIAL.getEmail());
         password2.sendKeys(USER_INFO.THERAPIST_CREDENTIAL.getPassword());
         login.click();
+        clickYesButton();
         }
 
-    public void clickYesButton()  {
+    public void clickYesButton(){
         try {
-            WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(3));
-            wait.until(ExpectedConditions.visibilityOf(yesButton)).click();
-        } catch (NoSuchElementException | TimeoutException e) {
+            yesButton.click();
+        } catch (NoSuchElementException e) {
             // Yes button is not displayed, continue without clicking
         }
     }
 
     }
+
+
 
 
