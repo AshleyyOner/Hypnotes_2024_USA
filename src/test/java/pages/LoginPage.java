@@ -1,7 +1,10 @@
 package pages;
 import static stepDefinitions.Hooks.driver;
+
+import enums.USER_INFO;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utilities.ConfigurationReader;
 
 public class LoginPage extends CommonPage{
 
@@ -19,4 +22,13 @@ public class LoginPage extends CommonPage{
     public WebElement login;
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement submitlogin;
+
+    public void loginMethod(String email, String password) {
+        driver.get(ConfigurationReader.getProperty("url"));
+        loginButton.click();
+        getLoginPage().email.sendKeys(USER_INFO.THERAPIST_CREDENTIAL.getEmail());
+        password2.sendKeys(USER_INFO.THERAPIST_CREDENTIAL.getPassword());
+        login.click();
+    }
+
 }
