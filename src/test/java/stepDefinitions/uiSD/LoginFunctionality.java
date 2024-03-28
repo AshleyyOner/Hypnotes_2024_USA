@@ -45,7 +45,7 @@ public class LoginFunctionality extends CommonPage {
         getLoginPage().password.clear();
     }
     @Then("When it is clicked Login button and relevant page should be displayed.")
-    public void when_it_is_clicked_login_button_and_relevant_page_should_be_displayed() {
+    public void when_it_is_clicked_login_button_and_relevant_page_should_be_displayed()  {
         getHomePage().relevantPage(LINKS.EXPECTED_LINKS.getCalendarUrl());
 
     }
