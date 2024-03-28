@@ -14,7 +14,6 @@ public class AddNewCouponPage extends CommonPage{
 
     public void clickCouponSection()  {
         couponsSectionButton.click();
-        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
     }
 
     public void clickAddNewCouponButton(){
