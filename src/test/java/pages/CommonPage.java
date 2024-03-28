@@ -13,12 +13,12 @@ public abstract class CommonPage {
     private HomePage homePage;
     private LoginPage loginPage;
     private AppointmentStepPage appointmentStepPage;
-
     private AddNewCouponPage addNewCouponPage;
+    private ContinueAppointment continueAppointment;
 
     public HomePage getHomePage() {
         if (homePage == null) {
-            homePage=new HomePage();
+            homePage = new HomePage();
         }
         return homePage;
     }
@@ -26,7 +26,7 @@ public abstract class CommonPage {
 
     public LoginPage getLoginPage() {
         if (loginPage == null) {
-            loginPage=new LoginPage();
+            loginPage = new LoginPage();
         }
         return loginPage;
     }
@@ -34,18 +34,24 @@ public abstract class CommonPage {
 
     public AppointmentStepPage getAppointmentStepPage() {
         if (appointmentStepPage == null) {
-            appointmentStepPage=new AppointmentStepPage();
+            appointmentStepPage = new AppointmentStepPage();
         }
         return appointmentStepPage;
     }
 
 
-
     public AddNewCouponPage getAddNewCouponPage() {
         if (addNewCouponPage == null) {
-           addNewCouponPage = new AddNewCouponPage();
+            addNewCouponPage = new AddNewCouponPage();
         }
         return addNewCouponPage;
+    }
+
+    public ContinueAppointment getContinueAppointmentStep() {
+        if (continueAppointment == null) {
+            continueAppointment = new ContinueAppointment();
+        }
+        return continueAppointment;
     }
 
 
