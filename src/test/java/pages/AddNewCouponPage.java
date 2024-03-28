@@ -13,11 +13,12 @@ public class AddNewCouponPage extends CommonPage{
     private WebElement addNewCouponButton;
 
     public void clickCouponSection()  {
-        couponsSectionButton.click();
         System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
+        couponsSectionButton.click();
     }
 
     public void clickAddNewCouponButton(){
         addNewCouponButton.click();
+        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
     }
 }
