@@ -13,6 +13,8 @@ public abstract class CommonPage {
     private HomePage homePage;
     private LoginPage loginPage;
 
+    private AddNewCouponPage addNewCouponPage;
+
     public HomePage getHomePage() {
         if (homePage == null) {
             homePage = new HomePage();
@@ -26,6 +28,13 @@ public abstract class CommonPage {
             loginPage = new LoginPage();
         }
         return loginPage;
+    }
+
+    public AddNewCouponPage getAddNewCouponPage() {
+        if (addNewCouponPage == null) {
+           addNewCouponPage = new AddNewCouponPage();
+        }
+        return addNewCouponPage;
     }
 
 }
