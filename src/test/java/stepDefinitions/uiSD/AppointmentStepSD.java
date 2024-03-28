@@ -11,7 +11,8 @@ public class AppointmentStepSD extends CommonPage {
     @And("user clicks on the schedule an appointment button")
     public void user_clicks_on_the_schedule_an_appointment_button() throws InterruptedException {
        Thread.sleep(5000);
-       getAppointmentStepPage().clickYes();
+       //getAppointmentStepPage().clickYes();
+        getLoginPage().clickYesButton();
         Thread.sleep(5000);
         getAppointmentStepPage().clickscheduleAnappointmentButton();
         Thread.sleep(5000);
