@@ -23,8 +23,9 @@ public class AppointmentStepPage extends CommonPage {
     public WebElement timeZone;
     @FindBy(xpath = "//span[contains(text(),'Yes')]")
     public WebElement yes;
-    @FindBy(xpath = "//button[contains(text(), 'Schedule an Appointment')]")
+    @FindBy(xpath = "//button[@class= 'ant-btn css-aqx16b ant-btn-circle ant-btn-default ant-btn-lg ant-btn-icon-only d-flex justify-content-center align-items-center']")
     public WebElement scheduleAnappointmentButton;
+
     public void clickYes() {
         ReusableMethods.hover(timeZone);
         yes.click();
