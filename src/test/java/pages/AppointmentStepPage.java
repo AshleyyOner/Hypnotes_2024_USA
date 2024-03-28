@@ -23,22 +23,29 @@ public class AppointmentStepPage extends CommonPage {
     public WebElement timeZone;
     @FindBy(xpath = "//span[contains(text(),'Yes')]")
     public WebElement yes;
-    @FindBy(xpath = "//button[contains(text(), 'Schedule an Appointment')]")
+    @FindBy(xpath = "//img[@alt='calendaricon']")
     public WebElement scheduleAnappointmentButton;
+
     public void clickYes() {
         ReusableMethods.hover(timeZone);
         yes.click();
     }
+
+    @FindBy(xpath = "//body/div[@id='__next']/div[1]/div[1]/section[1]/section[1]/main[1]/div[1]/div[1]/div[2]/div[1]/div[4]/div[1]/div[2]/button[1]/span[1]/span[1]/img[1]")
+    public WebElement newEvent;
 
 //    public void clickClientSelect()  {
 //        calendarButton.click();
 //        //clientSelect.click();
 //    }
 
-    public void clickscheduleAnappointmentButton() {
-
+    public void clickscheduleAnappointmentButton() throws InterruptedException {
+Thread.sleep(3000);
         getAppointmentStepPage().scheduleAnappointmentButton.click();
     }
 
+//    public void newer() {
+//        newEvent.click();
+//
+//    }
 }
-
