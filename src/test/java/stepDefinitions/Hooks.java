@@ -9,7 +9,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import pages.CommonPage;
-import utilities.ConfigurationReader;
 import utilities.DB_utilities;
 import utilities.Driver;
 import utilities.ReusableMethods;
