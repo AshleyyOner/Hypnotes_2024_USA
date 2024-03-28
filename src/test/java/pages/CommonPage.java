@@ -14,6 +14,8 @@ public abstract class CommonPage {
     private LoginPage loginPage;
     private AppointmentStepPage appointmentStepPage;
 
+    private AddNewCouponPage addNewCouponPage;
+
     public HomePage getHomePage() {
         if (homePage == null) {
             homePage=new HomePage();
@@ -29,11 +31,21 @@ public abstract class CommonPage {
         return loginPage;
     }
 
+
     public AppointmentStepPage getAppointmentStepPage() {
         if (appointmentStepPage == null) {
             appointmentStepPage=new AppointmentStepPage();
         }
         return appointmentStepPage;
+    }
+
+
+
+    public AddNewCouponPage getAddNewCouponPage() {
+        if (addNewCouponPage == null) {
+           addNewCouponPage = new AddNewCouponPage();
+        }
+        return addNewCouponPage;
     }
 
 

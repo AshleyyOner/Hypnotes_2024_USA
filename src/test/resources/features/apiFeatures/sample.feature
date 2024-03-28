@@ -3,5 +3,5 @@
 
 Feature: A description
 
-  Scenario: A scenario
-    Given something..
+  Scenario: A scenario sample
+    Given user goes to the homepage
