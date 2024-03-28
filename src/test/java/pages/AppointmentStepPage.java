@@ -23,6 +23,7 @@ public class AppointmentStepPage extends CommonPage {
     public WebElement timeZone;
     @FindBy(xpath = "//span[contains(text(),'Yes')]")
     public WebElement yes;
+
     @FindBy(xpath = "//img[@alt='calendaricon']")
     public WebElement scheduleAnappointmentButton;
 

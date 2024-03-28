@@ -7,3 +7,4 @@ Feature: Schedule an Appointment
     And User enters valid email and password
 #    Then  When it is clicked Login button and relevant page should be displayed.
     And user clicks on the schedule an appointment button
+

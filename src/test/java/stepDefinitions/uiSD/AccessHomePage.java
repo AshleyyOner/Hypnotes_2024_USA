@@ -17,6 +17,7 @@ public class AccessHomePage extends CommonPage {
     }
     @Then("User verifies that home page is accessible")
     public void user_verifies_that_home_page_is_accessible() {
+
         getHomePage().assertUrlHompage();
     }
     }
