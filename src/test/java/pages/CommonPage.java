@@ -10,21 +10,13 @@ public abstract class CommonPage {
         PageFactory.initElements(driver, this);
     }
 
-    private AppointmentStepPage appointmentStepPage;
-    public AppointmentStepPage getAppointmentStepPage() {
-        if (appointmentStepPage == null) {
-            appointmentStepPage = new AppointmentStepPage();
-        }
-        return appointmentStepPage;
-    }
-
-
     private HomePage homePage;
     private LoginPage loginPage;
+    private AppointmentStepPage appointmentStepPage;
 
     public HomePage getHomePage() {
         if (homePage == null) {
-            homePage = new HomePage();
+            homePage=new HomePage();
         }
         return homePage;
     }
@@ -32,9 +24,16 @@ public abstract class CommonPage {
 
     public LoginPage getLoginPage() {
         if (loginPage == null) {
-            loginPage = new LoginPage();
+            loginPage=new LoginPage();
         }
         return loginPage;
+    }
+
+    public AppointmentStepPage getAppointmentStepPage() {
+        if (appointmentStepPage == null) {
+            appointmentStepPage=new AppointmentStepPage();
+        }
+        return appointmentStepPage;
     }
 
 
