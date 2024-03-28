@@ -17,11 +17,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="fb64cc77-9084-4cad-8862-7eb1f7477db3">
-      <console name="Connection" type="STANDARD" schema="" session="Main"><![CDATA[select * from urbanicfarm.event where id=15
-select email, first_name, id from urbanicfarm.`user` where `first_name`='Andrew' order by id desc;
-select * from urbanicfarm.`user`order by id desc;
-
-select * from promo_code;]]></console>
+      <console name="Connection" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
